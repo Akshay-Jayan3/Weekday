@@ -4,6 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Filters from "./components/Filters";
+import JobListing from "./components/JobListing";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           flexDirection="column"
         >
           <Filters />
+          <JobListing />
         </Box>
       </Container>
     </React.Fragment>
