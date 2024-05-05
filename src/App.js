@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Filters from "./components/Filters";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap={2}
+          p={2}
+          flexDirection="column"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Filters />
+        </Box>
+      </Container>
+    </React.Fragment>
   );
 }
 
