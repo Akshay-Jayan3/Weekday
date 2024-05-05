@@ -31,7 +31,6 @@ export default function RoleSelect() {
   return (
     <div className="role-select-container">
       <Select
-        defaultValue={groupedOptions[1]}
         isMulti
         options={groupedOptions}
         formatGroupLabel={formatGroupLabel}

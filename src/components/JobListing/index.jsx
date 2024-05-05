@@ -1,11 +1,9 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
 import JobCard from "../JobCard";
 
-const JobListing = () => {
+const JobListing = ({ jobs }) => {
   return (
     <Box
       sx={{ flexGrow: 1 }}
@@ -14,23 +12,18 @@ const JobListing = () => {
       justifyContent="center"
     >
       <Grid container spacing={3}>
-        <Grid item lg={4} sx={{padding:"8px"}}>
-          <JobCard/>
-        </Grid>
-        <Grid item lg={4}>
-          <JobCard/>
-        </Grid>
-        <Grid item lg={4}>
-          <JobCard/>
-        </Grid>
-        <Grid item lg={4}>
-          <JobCard/>
-        </Grid>
-        <Grid item lg={4}>
-          <JobCard/>
-        </Grid>
-        
+        {jobs?.map((job, i) => (
+          <Grid item lg={4} key={i}>
+            {" "}
+            {/* Removed sx prop */}
+            <JobCard job={job} />
+          </Grid>
+        ))}
       </Grid>
+      <div
+        id="intersection-target"
+        style={{ height: "10px", backgroundColor: "red" }}
+      ></div>
     </Box>
   );
 };
