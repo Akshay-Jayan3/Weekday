@@ -33,8 +33,8 @@ export default function JobCard() {
             <img />
           </div>
           <div className="company-info">
-            <p>About Company</p>
-            <p>About us</p>
+            <p className="about-company">About Company</p>
+            <p className="about-us">About us</p>
             <div className="about-info">
               <p>
                 Mindtickle is the market-leading sales readiness platform,

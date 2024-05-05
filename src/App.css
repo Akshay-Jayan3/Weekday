@@ -8,6 +8,10 @@
   font-size: 0.75rem;
 }
 
+.role-select-container{
+  min-width: 150px;
+}
+
 .displayFlex {
   width: 100%;
   display: flex;
@@ -48,6 +52,14 @@
 .company-info {
   display: flex;
   flex-direction: column;
+  .about-company{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .about-us{
+    font-size: 14px;
+    font-weight: 700;
+  }
 }
 
 .about-info {

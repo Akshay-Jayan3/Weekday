@@ -13,7 +13,22 @@ const JobListing = () => {
       alignItems="center"
       justifyContent="center"
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
+        <Grid item lg={4} sx={{padding:"8px"}}>
+          <JobCard/>
+        </Grid>
+        <Grid item lg={4}>
+          <JobCard/>
+        </Grid>
+        <Grid item lg={4}>
+          <JobCard/>
+        </Grid>
+        <Grid item lg={4}>
+          <JobCard/>
+        </Grid>
+        <Grid item lg={4}>
+          <JobCard/>
+        </Grid>
         
       </Grid>
     </Box>
