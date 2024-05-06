@@ -5,6 +5,7 @@ import ExperienceSelect from "./Experience";
 import RemoteSelect from "./Remote";
 import SalarySelect from "./Salary";
 import Search from "./Search";
+import TechStackSelect from "./TechStack";
 const Filters = ({ handleFilterChange }) => {
   return (
     <div className="filter-container">
@@ -13,6 +14,7 @@ const Filters = ({ handleFilterChange }) => {
       <ExperienceSelect handleFilterChange={handleFilterChange}/>
       <RemoteSelect handleFilterChange={handleFilterChange}/>
       <SalarySelect handleFilterChange={handleFilterChange}/>
+      <TechStackSelect handleFilterChange={handleFilterChange}/>
       <Search handleFilterChange={handleFilterChange}/>
     </div>
   );

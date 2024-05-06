@@ -1,5 +1,15 @@
-// dataSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+// Function to save filters to localStorage
+const saveFiltersToLocalStorage = (filters) => {
+  localStorage.setItem('filters', JSON.stringify(filters));
+};
+
+// Function to load filters from localStorage
+const loadFiltersFromLocalStorage = () => {
+  const filters = localStorage.getItem('filters');
+  return filters ? JSON.parse(filters) : null;
+};
 
 export const fetchData = createAsyncThunk(
   'data/fetchData',
@@ -22,23 +32,27 @@ export const fetchData = createAsyncThunk(
   }
 );
 
+const initialState = {
+  jobs: [],
+  status: 'idle',
+  error: null,
+  limit: 10,
+  offset: 0,
+  filters: loadFiltersFromLocalStorage() || {
+    roles: { label: '', data: [] },
+    employees: { label: '', data: '' },
+    experience: { label: '', data: '' },
+    salary: { label: '', data: '' },
+    location: { label: '', data: [] },
+    search: { label: '', data: '' },
+    tech: { label: '', data: [] }
+  },
+  selectedRole:[]
+};
+
 const dataSlice = createSlice({
   name: 'data',
-  initialState: {
-    jobs: [],
-    status: 'idle',
-    error: null,
-    limit: 10,
-    offset: 0,
-    filters: {
-      roles: {label:'',data:[]},
-      employees: {label:'',data:''},
-      experience:{label:'',data:''},
-      salary: {label:'',data:''},
-      location: {label:'',data:[]},
-      search:{label:'',data:''}
-    }
-  },
+  initialState,
   reducers: {
     resetData(state) {
       state.jobs = [];
@@ -48,6 +62,8 @@ const dataSlice = createSlice({
     },
     setFilters(state, action) {
       state.filters = action.payload;
+      // Save filters to localStorage when they are updated
+      saveFiltersToLocalStorage(action.payload);
     },
   },
   extraReducers: builder => {
@@ -67,6 +83,6 @@ const dataSlice = createSlice({
   },
 });
 
-export const { resetData, setFilters, clearFilters } = dataSlice.actions;
+export const { resetData, setFilters } = dataSlice.actions;
 
 export default dataSlice.reducer;

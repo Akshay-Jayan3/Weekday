@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
-import { ExperienceOptions } from "./options";
+import { TechStackOptions } from "./options";
 import { useSelector } from "react-redux";
 
-export default function ExperienceSelect({ handleFilterChange }) {
-  const { filters } = useSelector((state) => state.data);
+export default function TechStackSelect({ handleFilterChange }) {
+  const { filters } = useSelector(
+    (state) => state.data
+  );
   const [selectedValue, setSelectedValue] = useState(null);
-  const value = localStorage.getItem('selectedExperience');
+  const value = localStorage.getItem('selectedTech');
   // Load selected value from localStorage
   useEffect(() => { 
     setSelectedValue(JSON.parse(value));
@@ -14,17 +16,17 @@ export default function ExperienceSelect({ handleFilterChange }) {
   return (
     <div className="select-container">
       <div className="label">
-        <p>{filters?.experience.label}</p>
+        <p>{filters?.tech.label}</p>
       </div>
       <Select
-        options={ExperienceOptions}
+        options={TechStackOptions}
         value={selectedValue}
-        placeholder="Experience"
+        placeholder="Tech Stack"
         className="mult-select"
         classNamePrefix="select"
-        isClearable
+        isMulti
         onChange={(selectedOption) => {
-          handleFilterChange("experience", selectedOption);
+          handleFilterChange("tech", selectedOption);
           setSelectedValue(selectedOption)
         }}
       />

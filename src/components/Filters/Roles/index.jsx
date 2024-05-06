@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import { groupedOptions } from "./options";
 import { useSelector } from "react-redux";
@@ -30,6 +30,12 @@ const formatGroupLabel = (data) => (
 
 export default function RoleSelect({ handleFilterChange }) {
   const { filters } = useSelector((state) => state.data);
+  const [selectedValue, setSelectedValue] = useState(null);
+  const value = localStorage.getItem('selectedRole');
+  // Load selected value from localStorage
+  useEffect(() => { 
+    setSelectedValue(JSON.parse(value));
+  }, [value]);
   return (
     <div className="select-container">
       <div className="label">
@@ -38,12 +44,14 @@ export default function RoleSelect({ handleFilterChange }) {
       <Select
         isMulti
         options={groupedOptions}
+        value={selectedValue}
         formatGroupLabel={formatGroupLabel}
         placeholder="Roles"
         className="mult-select"
         classNamePrefix="select"
         onChange={(selectedOption) => {
           handleFilterChange("role", selectedOption);
+          setSelectedValue(selectedOption)
         }}
       />
     </div>
