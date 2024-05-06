@@ -3,15 +3,12 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 export default function JobCard({ job }) {
   return (
     <Card sx={{ borderRadius: "20px", maxWidth: "360px" }} id="intersection-target">
       <div style={{ padding: "5px 15px", marginTop: "0.5rem" }}>
         <div className="posted-time">
-          <img />
           <p>⏳ Posted 10 days ago</p>
         </div>
       </div>
@@ -24,7 +21,7 @@ export default function JobCard({ job }) {
           flexDirection="column"
         >
           <div className="displayFlex">
-            <img style={{width:"2.5rem" ,aspectRatio:1/1}} src={job.logoUrl} />
+            <img style={{width:"2.5rem" ,aspectRatio:1/1}} src={job.logoUrl} alt="company-logo"/>
             <div className="info">
               <h3>{job.companyName}</h3>
               <h2>{job.jobRole}</h2>
