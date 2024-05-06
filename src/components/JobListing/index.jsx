@@ -26,7 +26,7 @@ const JobListing = ({ jobs }) => {
             flexDirection:"column"
           }}
         >
-          <img src={nodata}  width={100} height={100}/>
+          <img src={nodata}  width={100} height={100} alt="no-data"/>
           <p className="no-data">No jobs available for this category at the moment</p>
         </div>
       )}
