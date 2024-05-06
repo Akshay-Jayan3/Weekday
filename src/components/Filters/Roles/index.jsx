@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import { groupedOptions } from "./options";
+import { useSelector } from "react-redux";
 
 const groupStyles = {
   display: "flex",
@@ -27,9 +28,13 @@ const formatGroupLabel = (data) => (
   </div>
 );
 
-export default function RoleSelect() {
+export default function RoleSelect({ handleFilterChange }) {
+  const { filters } = useSelector((state) => state.data);
   return (
-    <div className="role-select-container">
+    <div className="select-container">
+      <div className="label">
+        <p>{filters?.roles.label}</p>
+      </div>
       <Select
         isMulti
         options={groupedOptions}
@@ -37,6 +42,9 @@ export default function RoleSelect() {
         placeholder="Roles"
         className="mult-select"
         classNamePrefix="select"
+        onChange={(selectedOption) => {
+          handleFilterChange("role", selectedOption);
+        }}
       />
     </div>
   );

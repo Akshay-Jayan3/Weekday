@@ -4,45 +4,45 @@ export const EngineeringOptions = [
     { value: 'fullstack', label: 'Fullstack' },
     { value: 'ios', label: 'IOS' },
     { value: 'flutter', label: 'Flutter' },
-    { value: 'react-native', label: 'React Native' },
+    { value: 'react native', label: 'React Native' },
     { value: 'android', label: 'android' },
-    { value: 'tech-lead', label: 'Tech Lead' },
+    { value: 'tech lead', label: 'Tech Lead' },
     { value: 'devops', label: 'Dev-ops' },
-    { value: 'data-engineer', label: 'Data Engineer' },
-    { value: 'data-science', label: 'Data science' },
-    { value: 'computer-vision', label: 'Computer Vision' },
+    { value: 'data engineer', label: 'Data Engineer' },
+    { value: 'data science', label: 'Data science' },
+    { value: 'computer vision', label: 'Computer Vision' },
     { value: 'nip', label: 'NIP' },
-    { value: 'deep-learning', label: 'Deep Learning' },
-    { value: 'test-qa', label: 'Test/QA' },
+    { value: 'deep learning', label: 'Deep Learning' },
+    { value: 'test qa', label: 'Test/QA' },
     { value: 'sre', label: 'SRE' },
     { value: 'data-infrastructure', label: 'Data Infrastructure' }
   ];
   
   export const DesignOptions = [
     { value: 'design', label: 'Design',},
-    { value: 'design-manager', label: 'Design Mamager'},
-    { value: 'graph-designer', label: 'Graph Designer'},
-    { value: 'product-designer', label: 'Product Designer' },
+    { value: 'design manager', label: 'Design Mamager'},
+    { value: 'graphic designer', label: 'Graphic Designer'},
+    { value: 'product designer', label: 'Product Designer' },
   ];
 
   export const ProductOptions = [
-    { value: 'product-manager', label: 'Product Manager',},
+    { value: 'product manager', label: 'Product Manager',},
   ];
   export const OperationOptions = [
-    { value: 'operation-manager', label: 'Operation Manager',},
-    { value: 'founder-office', label: 'Founders Office/Chief Of Staff'},
+    { value: 'operation manager', label: 'Operation Manager',},
+    { value: 'founder office', label: 'Founders Office/Chief Of Staff'},
   ];
   export const SalesOptions = [
-    { value: 'sale-development', label: 'Sales Development Representative',},
-    { value: 'account-executive', label: 'Account Executive'},
-    { value: 'account-manager', label: 'Account Manager'},
+    { value: 'sale development', label: 'Sales Development Representative',},
+    { value: 'account executive', label: 'Account Executive'},
+    { value: 'account manager', label: 'Account Manager'},
   ];
 
   export const MarketingOptions = [
-    { value: 'digital-marketing-manger', label: 'Digital Marketing Manager',},
-    { value: 'growth-hacker', label: 'Growth Hacker'},
+    { value: 'digital marketing manger', label: 'Digital Marketing Manager',},
+    { value: 'growth hacker', label: 'Growth Hacker'},
     { value: 'marketing', label: 'Marketing'},
-    { value: 'product-marketing-manager', label: 'Product Marketing Manager'},
+    { value: 'product marketing manager', label: 'Product Marketing Manager'},
   ];
 
   export const OtherEngineerinOptions = [
@@ -51,13 +51,13 @@ export const EngineeringOptions = [
     { value: 'systems', label: 'Systems'},
   ];
   export const BussinessOptions = [
-    { value: 'bussiness-analyst', label: 'Bussiness Analyst'},
+    { value: 'bussiness analyst', label: 'Bussiness Analyst'},
   ];
   export const DataAnalystOptions = [
-    { value: 'data-analyst', label: 'Data Analyst'},
+    { value: 'data analyst', label: 'Data Analyst'},
   ];
   export const ProjectManagerOptions = [
-    { value: 'project-manager', label: 'Project Manager'},
+    { value: 'project manager', label: 'Project Manager'},
   ];
   export const ManagementOptions = [
     { value: 'management', label: 'Management'}

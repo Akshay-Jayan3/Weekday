@@ -30,7 +30,14 @@ const dataSlice = createSlice({
     error: null,
     limit: 10,
     offset: 0,
-    filters: { name: '', age: '', gender: '', city: '' }
+    filters: {
+      roles: {label:'',data:[]},
+      employees: {label:'',data:''},
+      experience:{label:'',data:''},
+      salary: {label:'',data:''},
+      location: {label:'',data:[]},
+      search:{label:'',data:''}
+    }
   },
   reducers: {
     resetData(state) {
@@ -42,9 +49,6 @@ const dataSlice = createSlice({
     setFilters(state, action) {
       state.filters = action.payload;
     },
-    clearFilters(state) {
-      state.filters = { name: '', age: '', gender: '', city: '' };
-    }
   },
   extraReducers: builder => {
     builder

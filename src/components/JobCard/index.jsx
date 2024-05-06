@@ -8,11 +8,11 @@ import Typography from "@mui/material/Typography";
 
 export default function JobCard({ job }) {
   return (
-    <Card sx={{ borderRadius: "20px", maxWidth: "360px" }}>
+    <Card sx={{ borderRadius: "20px", maxWidth: "360px" }} id="intersection-target">
       <div style={{ padding: "5px 15px", marginTop: "0.5rem" }}>
         <div className="posted-time">
           <img />
-          <p>Posted 10 days ago</p>
+          <p>⏳ Posted 10 days ago</p>
         </div>
       </div>
       <CardContent sx={{ padding: "5px" }}>
@@ -33,7 +33,7 @@ export default function JobCard({ job }) {
           </div>
           <div className="displayFlex salary">
             <p>Estimated Salary : {job.minJdSalary}-{job.maxJdSalary} LPA</p>
-            <img />
+            <span>✅</span>
           </div>
           <div className="company-info">
             <p className="about-company">About Company</p>
@@ -58,7 +58,7 @@ export default function JobCard({ job }) {
           gap: "1rem",
         }}
       >
-        <button className="custom-btn easy-apply">Easy Apply</button>
+        <button className="custom-btn easy-apply">⚡ Easy Apply</button>
         <button className="custom-btn ask-referral">Ask Referral</button>
       </CardActions>
     </Card>
