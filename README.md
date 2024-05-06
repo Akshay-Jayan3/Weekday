@@ -15,7 +15,7 @@ Make sure you have the following software installed on your machine:
 1. Clone the repository to your local machine using the following command:
      git clone https://github.com/Akshay-Jayan3/Weekday
    
-2.Install the project dependencies:
+2. Install the project dependencies:
      npm install
 
 ### Running the Application
@@ -34,7 +34,7 @@ To run the application locally, follow these steps:
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React.js](https://reactjs.org/)
 - [Material UI](https://mui.com/material-ui)
-- {Redux Toolkit](https://redux-toolkit.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## Feedback
 
